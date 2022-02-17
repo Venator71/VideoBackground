@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing and border-box includes padding and border when setting an width anf height */
+    box-sizing: border-box;
+    
+}
+
+body {
+
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+a {
+
+    text-decoration: none;
+    color:gray;
+}
+
+#main {
+    position: relative;
+    /* VH or viewport height determines the height if the element by setting it to the percentage of the view port (NOTE: VW is used for width)*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*  Same as setting center to justify-content anf align ite,s (aka shorthand */
+    place-items: center;
+    padding: 0 20px;
+}
+
+#video-container {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Media/cover.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* The object-fit property determines how a video or image (aka img element) is resized to fit inside its container (aka parent element). Setting the value to "cover" causes the video tp aspect ratio and fill the given dimension */
+    object-fit: cover;
+}
+
+#cover {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#content {
+
+    color:white;
+    z-index: 2;
+    text-align: center;
+}
+#click {
+
+        /* in-line block allows you to set top and bottom margin as well as width and height. 
+        This is not the case with inline */
+        display: inline-block;
+        margin-top: 25px;
+        border: 2px solid white;
+        padding: 10px 30px;
+        background-color: #4b5163;
+        /* A elements will not inherit text color like other elements will. Must be applied directly */
+        color: white;
+        border-radius: 20px;
+        font-size: 20px;
+        opacity: 0.8;
+}
+
+#click:hover {
+
+    transform: scale(0.80);
+    
+}
+
+#about {
+
+    padding: 50px;
+    text-align: center;
+    
+}
+
+#about p {
+
+    font-size: 20px;
+    max-width: 500px;
+    margin:auto;
+
+}
+
+#about h2 {
+
+    margin: 40px 0;
+    color: #4b5163;
+}
+
+i {
+    font-size: 48px;
+    margin: 0 5px;
+}
